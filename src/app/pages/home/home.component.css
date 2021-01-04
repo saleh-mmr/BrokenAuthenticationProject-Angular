@@ -1,0 +1,96 @@
+.main-content-home-page{
+  width: fit-content;
+}
+.partOneIntroduction{
+  background: url("../../../assets/images/slide1.png");
+  background-size: cover;
+  height: 100vh;
+}
+.headre-slide{
+  text-align: center;
+  font-family: B titr;
+  font-size: -webkit-xxx-large;
+  margin-bottom: 40px;
+}
+.header-index{
+  text-align: center;
+  font-family: B titr;
+  font-size: -webkit-xxx-large;
+  margin-bottom: 40px;
+}
+.index-element{
+  text-align: right;
+  font-family: B nazanin;
+  margin-bottom: 40px;
+  font-size: larger;
+  color: #065292;
+}
+.div-header-index{
+  position: relative;
+  top: -12rem;
+}
+.image_index{
+  text-align: right;
+}
+.index_text{
+
+}
+.headre-slide4{
+  text-align: center;
+  font-family: B titr;
+  font-size: -webkit-xxx-large;
+  margin: 40px;
+}
+.slide2-text-span{
+  text-align: justify;
+  font-family: "B Nazanin";
+  direction: rtl;
+  line-height: 174%;
+  font-size: xx-large;
+  margin: auto;
+  padding-right: 150px;
+}
+.slide3-text-span{
+  text-align: justify;
+  font-family: "B Nazanin";
+  direction: rtl;
+  line-height: 174%;
+  font-size: xx-large;
+  margin: auto;
+  padding-left: 125px;
+}
+.image_slide3{
+  padding-left: 170px;
+}
+.image_slide4{
+  text-align: center;
+}
+.slide4-text-span{
+  text-align: justify;
+  font-family: "B Nazanin";
+  direction: rtl;
+  line-height: 174%;
+  font-size: xx-large;
+}
+.slide5-text-span{
+  text-align: justify;
+  font-family: "B Nazanin";
+  direction: rtl;
+  line-height: 174%;
+  font-size: xx-large;
+  padding-right: 150px;
+}
+.partFive{
+}
+.partThree{
+}
+.partOneIntroduction{
+}
+.partFour{
+  background-color: #e9f5ff;
+}
+.partTwo{
+  background-color: #e9f5ff;
+}
+.partOneIndex{
+}

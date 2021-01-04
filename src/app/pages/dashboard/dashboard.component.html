@@ -1,0 +1,145 @@
+<div>
+  <div class="profile">
+
+    <div class="main-content">
+      <div style="height: 30%">
+
+      </div>
+      <div style="margin: auto">
+        <p style="font-family: B Titr;font-size: xx-large;"> پروفایل کاربر</p>
+      </div>
+    </div>
+
+    <div class="alter-contetnt" style="text-align: center">
+      <div style="height: 50px;">
+      </div>
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 table">
+
+        <!-- حذف -->
+        <ng-container matColumnDef="delete">
+          <th mat-header-cell *matHeaderCellDef class="header-table-title"></th>
+          <td mat-cell *matCellDef="let element" class="table-records-field"><button class="delete_btn" (click)="delete_patient(element.nationalcode)">حذف</button></td>
+        </ng-container>
+
+        <!-- بیماری -->
+        <ng-container matColumnDef="disease">
+          <th mat-header-cell *matHeaderCellDef class="header-table-title" style="width: 14%"> بیماری </th>
+          <td mat-cell *matCellDef="let element" class="table-records-field">{{element.disease}}</td>
+        </ng-container>
+
+        <!-- کدملی -->
+        <ng-container matColumnDef="nationalcode">
+          <th mat-header-cell *matHeaderCellDef class="header-table-title" style="width: 14%"> کدملی </th>
+          <td mat-cell *matCellDef="let element" class="table-records-field"> {{element.nationalcode}} </td>
+        </ng-container>
+
+        <!-- شماره تماس -->
+        <ng-container matColumnDef="phonenumber">
+          <th mat-header-cell *matHeaderCellDef class="header-table-title" style="width: 14%"> شماره تماس </th>
+          <td mat-cell *matCellDef="let element" class="table-records-field"> {{element.phonenumber}} </td>
+        </ng-container>
+
+        <!-- نام خانوادگی -->
+        <ng-container matColumnDef="lastname">
+          <th mat-header-cell *matHeaderCellDef class="header-table-title" style="width: 14%"> نام خانوادگی </th>
+          <td mat-cell *matCellDef="let element" class="table-records-field"> {{element.lastname}} </td>
+        </ng-container>
+
+        <!-- نام -->
+        <ng-container matColumnDef="firstname">
+          <th mat-header-cell *matHeaderCellDef class="header-table-title" style="width: 10%"> نام </th>
+          <td mat-cell *matCellDef="let element" class="table-records-field"> {{element.firstname}} </td>
+        </ng-container>
+
+        <!-- ردیف -->
+        <ng-container matColumnDef="position">
+          <th mat-header-cell *matHeaderCellDef class="header-table-title" style="width: 7%"> ردیف </th>
+          <td mat-cell *matCellDef="let element" class="table-records-field"> {{element.position}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+
+      <button class="new_patient_btn" >افزودن بیمار</button>
+
+    </div>
+  </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<div class="px-3 main-profile-content">-->
+<!--  <div class="row profile-row default">-->
+
+
+<!--    <div class="main-content p-4 col-8">-->
+
+<!--      <div class="header-content-main mb-2">-->
+<!--        <div class="row header-content">-->
+<!--          <div class="col-3 header-context-logo text-right p-4">-->
+<!--            <img src="{{logo}}" alt="" style=" width: 70px">-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+
+<!--      <div class="profile-content-root">-->
+<!--        <div class="dynamic-component-content">-->
+<!--          <div>-->
+<!--            <p>salam</p>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+
+<!--    </div>-->
+
+
+<!--    <div class="info-content-main p-4 col-4">-->
+<!--      <div class="p-4 info-content">-->
+
+<!--        <div class="info-card text-center">-->
+<!--          <div class="info-card-avatar m-3">-->
+
+<!--          </div>-->
+
+<!--          <div class="col-10 user-info-dtext-content text-center">-->
+<!--          </div>-->
+<!--        </div>-->
+
+<!--        <div class="user-tools">-->
+<!--          <div class="user-tools-btns-content">-->
+<!--            <button class="user-tool-btn">ثبت گزارش جدید</button>-->
+<!--          </div>-->
+<!--          <div class="user-tools-btns-content">-->
+<!--            <button class="user-tool-btn">گزارش های اخیر</button>-->
+<!--          </div>-->
+<!--          <div class="user-tools-btns-content">-->
+<!--            <button class="user-tool-btn">افراد مرتبط</button>-->
+<!--          </div>-->
+<!--          <div class="user-tools-btns-content">-->
+<!--            <button class="user-tool-btn">ویرایش پروفایل</button>-->
+<!--          </div>-->
+<!--          <div class="user-tools-btns-content">-->
+<!--            <button class="user-tool-btn">خروج</button>-->
+<!--          </div>-->
+<!--        </div>-->
+
+<!--      </div>-->
+<!--    </div>-->
+
+
+<!--  </div>-->
+<!--</div>-->
