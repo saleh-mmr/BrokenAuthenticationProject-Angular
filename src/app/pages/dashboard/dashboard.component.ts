@@ -23,6 +23,7 @@ export class DashboardComponent implements OnInit {
   y: any;
   flag = false;
   avatar = 'assets/avatar.jpg';
+  userInfo: string;
   displayedColumns: string[] = ['delete', 'disease', 'nationalcode', 'phonenumber', 'lastname', 'firstname', 'position'];
   dataSource = ELEMENT_DATA;
   private a: any;
@@ -31,6 +32,10 @@ export class DashboardComponent implements OnInit {
   constructor(private auth: AuthenticationService) { }
 
   ngOnInit(): void {
+    this.auth.userInfo().subscribe(rsp => {
+      // @ts-ignore
+      this.userInfo = rsp.username;
+    });
     // this.dataSource = [];
     this.auth.get_all_reports().subscribe(data => {
       // @ts-ignore
@@ -56,9 +61,7 @@ export class DashboardComponent implements OnInit {
 
   }
 
-  // tslint:disable-next-line:typedef
-  add_patient(){
-
+  logout(): void{
+    this.auth.logout();
   }
-
 }

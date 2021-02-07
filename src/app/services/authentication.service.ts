@@ -49,13 +49,22 @@ export class AuthenticationService {
   // tslint:disable-next-line:typedef
   delete_patient(data){
     const str = 'http://127.0.0.1:8000/delete-patient/' + data;
-    console.log(str);
     return this.http.get(str);
   }
 
   // tslint:disable-next-line:typedef
   add_patient(data){
     return this.http.post<any>('http://127.0.0.1:8000/delete-patient/', data);
+  }
+
+  // tslint:disable-next-line:typedef
+  isAdmin(){
+    return this.http.get('http://127.0.0.1:8000/is-admin/');
+  }
+
+  // tslint:disable-next-line:typedef
+  userInfo(){
+    return this.http.get('http://127.0.0.1:8000/user-info/');
   }
 
 

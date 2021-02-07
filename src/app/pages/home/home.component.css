@@ -1,5 +1,30 @@
 .main-content-home-page{
-  width: fit-content;
+  /*width: fit-content;*/
+}
+.broken-Auth{
+  position: absolute;
+  top: 22rem;
+  left: 10rem;
+  font-family: b titr;
+  color: white;
+  direction: rtl;
+  font-size: 57px;
+}
+.erae{
+  position: absolute;
+  top: 37rem;
+  left: 20rem;
+  font-family: b titr;
+  color: white;
+  direction: rtl;
+  font-size: 19px;
+}
+.saleh{
+  position: absolute;
+  top: 40rem;
+  left: 7rem;
+  font-family: b titr;
+  color: white;
 }
 .partOneIntroduction{
   background: url("../../../assets/images/slide1.png");
@@ -93,4 +118,29 @@
   background-color: #e9f5ff;
 }
 .partOneIndex{
+}
+.return-main-page-btn{
+  width: 100px;
+  background-color: #ad90a5;
+  border-radius: 50px;
+  margin: 5.5%;
+  text-align: center;
+  color: white;
+  height: 41px;
+  outline: none;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: "B Titr", serif;
+}
+.return-main-page-btn-forbidden{
+  width: 100px;
+  background-color: #9e59aa;
+  border-radius: 50px;
+  text-align: center;
+  color: white;
+  height: 41px;
+  outline: none;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: "B Titr", serif;
 }

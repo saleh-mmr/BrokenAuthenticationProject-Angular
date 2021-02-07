@@ -1,14 +1,15 @@
-<div class="main-content-home-page">
+<div *ngIf="isAdmin" class="main-content-home-page">
 
 
-  <div class="partOneIntroduction">
+  <div class="partOneIntroduction" style="width: 100%">
+    <h1 class="broken-Auth">احراز هویت شکسته</h1>
+    <h1 class="erae">ارائه دهنده:</h1>
+    <h1 class="saleh">صالح میرمحمدرضایی</h1>
   </div>
-  <div class="SPAN" style="height: 50px;"></div>
+  <div class="SPAN" style="height: 50px; width: 50px;"></div>
 
 
-  <div class="partOneIndex" style="height: 100vh;">
-    <div class="row" style="height: inherit">
-
+  <div class="partOneIndex row" style="height: 100vh; width: 100%;">
       <div class="col-5 slide3-text-span" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
         <div class="div-header-index">
           <h1 class="header-index">سر فصل مطالب</h1>
@@ -27,12 +28,11 @@
            data-aos-easing="ease-in-sine">
         <img src="assets/images/slide2.png" alt="" style="height: 100vh;margin-right: 50px;">
       </div>
-    </div>
   </div>
-  <div class="SPAN" style="height: 30px;"></div>
+  <div class="SPAN" style="height: 30px; width: 50px;"></div>
 
 
-  <div class="partTwo row" style="height: 100vh; width: fit-content">
+  <div class="partTwo row" style="height: 100vh;  width: 100%;">
       <div class="col-7 image_slide2" data-aos="fade-right"
            data-aos-offset="300"
            data-aos-easing="ease-in-sine">
@@ -54,7 +54,7 @@
   <div class="SPAN" style="height: 30px;"></div>
 
 
-  <div class="partThree row" style="height: 100vh; width: fit-content">
+  <div class="partThree row" style="height: 100vh;  width: 100%;">
 
       <div class="col-5 slide3-text-span" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
         <div>
@@ -86,9 +86,7 @@
   <div class="SPAN" style="height: 30px;"></div>
 
 
-  <div class="partFour" style="height: 100vh; width: fit-content">
-    <div style="height: inherit">
-
+  <div class="partFour" style="height: 100vh;  width: 100%;">
       <div class="image_slide4"  data-aos="zoom-in"
            data-aos-offset="300"
            data-aos-easing="ease-in-sine">
@@ -109,8 +107,6 @@
 
         </div>
       </div>
-
-    </div>
   </div>
   <div class="SPAN" style="height: 30px;"></div>
 
@@ -129,7 +125,7 @@
           <h1 style="font-family: B nazanin;font-size: xx-large; text-align: right; direction: rtl">نمونه 1:	قرار دادن شناسه نشست در URL</h1>
         </div>
         <div style="text-align: center">
-          <img src="assets/images/img2.png" alt="" style="">
+          <img src="assets/images/img-url.png" alt="" style="">
         </div>
         <div style="text-align: center">
           <h1 style="font-family: B nazanin;font-size: large; direction: rtl">تصویر 2: یک نمونه اشتباه از url</h1>
@@ -160,15 +156,21 @@
   <div class="SPAN" style="height: 30px;"></div>
 
 
-  <div class="row" style="height: 100vh;background-color: #e9f5ff;">
+  <div class="row" style="height: 100vh;background-color: #e9f5ff;  width: 100%;">
     <div class="col-5">
       <div style="height: 50px;"></div>
       <div>
         <h1 style="text-align: center; font-family: B titr;font-size: -webkit-xxx-large;">راهکار های مقابله</h1>
 
       </div>
+      <div style="height: 150px;"></div>
       <div style="text-align: justify;font-family: B Nazanin;direction: rtl;line-height: 174%; font-size: xx-large;margin: auto; padding-left: 125px;">
-        <span>بلاب بلاب بلاب</span>
+
+        <h1 style="font-family: B Nazanin;font-size: 30px;">جلوگیری از استفاده پسورد هایی با ساختار ساده</h1>
+        <h1 style="font-family: B Nazanin;font-size: 30px;">ذخیره پسورد کاربران در دیتابیس به صورت رمز‌نگاری شده</h1>
+        <h1 style="font-family: B Nazanin;font-size: 30px;">حذف نشست های غیرفعال از دیتابیس</h1>
+        <h1 style="font-family: B Nazanin;font-size: 30px;">محدود کردن تعداد ورود های ناموفق</h1>
+        <h1 style="font-family: B Nazanin;font-size: 30px;">استفاده از یک فریم‌ورک مطمئن جهت پیاده‌سازی مدل کاربری</h1>
       </div>
     </div>
     <div class="col-7" style="text-align: center">
@@ -178,9 +180,17 @@
   <div class="SPAN" style="height: 30px;"></div>
 
 
-  <div class="partOneIntroduction" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-      <h1 style="font-family: B Titr; text-align: center; font-size: 36px;height: inherit; padding-top: 30rem;">با تشکر</h1>
+  <div class="partOneIntroduction" style=" width: 100%; text-align: center;" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+      <h1 style="font-family: B Titr; text-align: center; font-size: 36px;padding-top: 30rem;">با تشکر</h1>
+    <button routerLink="/profile" class="return-main-page-btn">بازگشت</button>
   </div>
 
+</div>
+
+<div *ngIf="!isAdmin" style="height: 100vh;background-color: #455a64; text-align: center;">
+  <img src="../../../assets/images/403.png" alt="">
+  <div>
+    <button routerLink="/"  class="return-main-page-btn-forbidden">بازگشت</button>
+  </div>
 </div>
 

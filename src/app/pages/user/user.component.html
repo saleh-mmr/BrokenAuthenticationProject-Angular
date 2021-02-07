@@ -1,1 +1,81 @@
-<p>user works!</p>
+<div class="back" style="height: 100vh;">
+
+  <div style="height: 15%"></div>
+
+  <div class="row" style="height: 30%; width: 90%">
+    <div class="col-5">
+      <div style="text-align: center;color: aliceblue;">
+        <h1 class="networkTitle">امنیت شبکه های کامپیوتری</h1>
+        <h1 class="year">زمستان 99</h1>
+      </div>
+      <div class="row" style="width: 90%">
+        <div class="col-6"  style="text-align: right;color: aliceblue;" *ngIf="!flag0">
+          <button class="btn-signup" (click)="turnToSignUp()">ثبت نام</button>
+        </div>
+        <div class="col-6"  style="text-align: right;color: aliceblue;" *ngIf="flag0">
+          <button class="btn-signup-deactive" (click)="turnToSignUp()">ثبت نام</button>
+        </div>
+        <div class="col-6"  style="text-align: left;color: aliceblue;" *ngIf="!flag1">
+          <button class="btn-signin" (click)="turnToSignIn()">ورود</button>
+        </div>
+        <div class="col-6"  style="text-align: left;color: aliceblue;" *ngIf="flag1">
+          <button class="btn-signup-deactive" (click)="turnToSignIn()">ورود</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row" style="height: 40%; width: 90%">
+    <div class="col-1"></div>
+
+    <div class="col-3" style="height: 100%" *ngIf="!flag0 && !flag1" data-aos="flip-left"
+         data-aos-easing="ease-out-cubic"
+         data-aos-duration="1500">
+      <p class="link-to-presentation">جهت مشاهده محتوا <a href="/presentation">کلیک</a> کنید</p>
+    </div>
+
+    <div class="col-3" style="height: 100%" *ngIf="flag0" data-aos="flip-left"
+         data-aos-easing="ease-out-cubic"
+         data-aos-duration="1500">
+      <form action="" class="login-form" style="text-align: center" [formGroup]="signinForm" (ngSubmit)="signin()">
+        <div class="input-container">
+          <input type="text" name="username" placeholder="نام کاربری خود را وارد کنید" id="username" class="input-box text-center" formControlName="username">
+        </div>
+        <div class="input-container">
+          <input type="password" name="password" placeholder="رمزعبور خود را وارد کنید" id="password" class="input-box text-center" formControlName="password">
+        </div>
+        <div>
+          <button type="submit" class="login-btn">ورود</button>
+        </div>
+      </form>
+
+    </div>
+    <div class="col-3" style="height: 100%" *ngIf="flag1" data-aos="flip-right"
+         data-aos-easing="ease-out-cubic"
+         data-aos-duration="1500">
+      <form action="" class="login-form" style="text-align: center" [formGroup]="signupForm" (ngSubmit)="signup()">
+        <div class="input-container">
+          <input type="text" name="user" placeholder="نام کاربری خود را وارد کنید" id="user" class="input-box text-center" formControlName="user">
+        </div>
+        <div class="input-container">
+          <input type="password" name="pass" placeholder="رمزعبور خود را وارد کنید" id="pass" class="input-box text-center" formControlName="pass">
+        </div>
+        <div class="input-container">
+          <input type="password" name="cpassword" placeholder="رمزعبور خود را وارد مجددا کنید" id="cpassword" class="input-box text-center" formControlName="cpassword">
+        </div>
+        <div>
+          <button type="submit" class="login-btn">ثبت نام</button>
+        </div>
+      </form>
+
+    </div>
+
+
+  </div>
+
+
+
+
+
+</div>

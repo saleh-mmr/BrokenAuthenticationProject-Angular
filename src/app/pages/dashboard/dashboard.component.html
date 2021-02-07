@@ -6,7 +6,9 @@
 
       </div>
       <div style="margin: auto">
-        <p style="font-family: B Titr;font-size: xx-large;"> پروفایل کاربر</p>
+        <p style="font-family: B Titr;font-size: xx-large;" [textContent]="userInfo"></p>
+        <button class="logout-btn" (click)="logout()">خروج</button>
+        <button class="logout-btn" routerLink="/presentation">محتوا</button>
       </div>
     </div>
 
